@@ -1,0 +1,287 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>test</title>
+        
+        <meta name="robots" content="noindex" />
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        
+        <link rel="stylesheet" href="css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="00_description.html">MyFancyProject</a></li><li class="chapter-item expanded "><a href="project1/00_intro.html"><strong aria-hidden="true">1.</strong> project1</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="project1/00_intro.html"><strong aria-hidden="true">1.1.</strong> log1</a></li><li class="chapter-item expanded "><a href="project1/changelog.html"><strong aria-hidden="true">1.2.</strong> changelog</a></li></ol></li><li class="chapter-item expanded "><a href="project2/00_intro.html"><strong aria-hidden="true">2.</strong> project2</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="project2/00_intro.html"><strong aria-hidden="true">2.1.</strong> dmb1</a></li><li class="chapter-item expanded "><a href="project2/changelog.html"><strong aria-hidden="true">2.2.</strong> changelog</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">test</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p>This is a intro. Fuck you.</p>
+<h1><a class="header" href="#chapter-1" id="chapter-1">Chapter 1</a></h1>
+<p>&lt;&lt;some_text&gt;&gt;</p>
+<figure><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="281px" preserveAspectRatio="none" style="width:588px;height:281px;" version="1.1" viewBox="0 0 588 281" width="588px" zoomAndPan="magnify"><defs><filter height="300%" id="f1pwmp0cnf3wk1" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--cluster A--><rect fill="#FFFFFF" filter="url(#f1pwmp0cnf3wk1)" height="246" style="stroke: #000000; stroke-width: 1.5;" width="419" x="158" y="24"/><rect fill="#FFFFFF" height="10" style="stroke: #000000; stroke-width: 1.5;" width="15" x="557" y="29"/><rect fill="#FFFFFF" height="2" style="stroke: #000000; stroke-width: 1.5;" width="4" x="555" y="31"/><rect fill="#FFFFFF" height="2" style="stroke: #000000; stroke-width: 1.5;" width="4" x="555" y="35"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="11" x="362" y="49.9951">A</text><!--cluster A.44--><rect fill="#FFFFFF" filter="url(#f1pwmp0cnf3wk1)" height="97" style="stroke: #000000; stroke-width: 1.5;" width="104" x="449" y="67"/><rect fill="#FFFFFF" height="10" style="stroke: #000000; stroke-width: 1.5;" width="15" x="533" y="72"/><rect fill="#FFFFFF" height="2" style="stroke: #000000; stroke-width: 1.5;" width="4" x="531" y="74"/><rect fill="#FFFFFF" height="2" style="stroke: #000000; stroke-width: 1.5;" width="4" x="531" y="78"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="36" x="483" y="92.9951">A.44</text><!--entity A.2--><rect fill="#FEFECE" filter="url(#f1pwmp0cnf3wk1)" height="46.2969" style="stroke: #A80036; stroke-width: 1.5;" width="62" x="271" y="102"/><rect fill="#FEFECE" height="10" style="stroke: #A80036; stroke-width: 1.5;" width="15" x="313" y="107"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="311" y="109"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="311" y="113"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="22" x="286" y="134.9951">A.2</text><!--entity A.3--><rect fill="#FEFECE" filter="url(#f1pwmp0cnf3wk1)" height="46.2969" style="stroke: #A80036; stroke-width: 1.5;" width="62" x="368" y="102"/><rect fill="#FEFECE" height="10" style="stroke: #A80036; stroke-width: 1.5;" width="15" x="410" y="107"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="408" y="109"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="408" y="113"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="22" x="383" y="134.9951">A.3</text><!--entity A.5--><rect fill="#FEFECE" filter="url(#f1pwmp0cnf3wk1)" height="46.2969" style="stroke: #A80036; stroke-width: 1.5;" width="62" x="271" y="208"/><rect fill="#FEFECE" height="10" style="stroke: #A80036; stroke-width: 1.5;" width="15" x="313" y="213"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="311" y="215"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="311" y="219"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="22" x="286" y="240.9951">A.5</text><!--entity A.6--><rect fill="#FEFECE" filter="url(#f1pwmp0cnf3wk1)" height="30" style="stroke: #A80036; stroke-width: 1.5;" width="40" x="368" y="216"/><rect fill="#FEFECE" height="10" style="stroke: #A80036; stroke-width: 1.5;" width="15" x="388" y="221"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="386" y="223"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="386" y="227"/><!--entity A.1--><rect fill="#FFFFFF" filter="url(#f1pwmp0cnf3wk1)" height="46.2969" style="stroke: #A80036; stroke-width: 1.5;" width="62" x="174" y="102"/><rect fill="#FFFFFF" height="10" style="stroke: #A80036; stroke-width: 1.5;" width="15" x="216" y="107"/><rect fill="#FFFFFF" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="214" y="109"/><rect fill="#FFFFFF" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="214" y="113"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="22" x="189" y="134.9951">A.1</text><!--entity A4.1--><rect fill="#FEFECE" filter="url(#f1pwmp0cnf3wk1)" height="46.2969" style="stroke: #A80036; stroke-width: 1.5;" width="71" x="465.5" y="102"/><rect fill="#FEFECE" height="10" style="stroke: #A80036; stroke-width: 1.5;" width="15" x="516.5" y="107"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="514.5" y="109"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="514.5" y="113"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="31" x="480.5" y="134.9951">A4.1</text><!--entity a--><rect fill="#FEFECE" filter="url(#f1pwmp0cnf3wk1)" height="46.2969" style="stroke: #A80036; stroke-width: 1.5;" width="48" x="6" y="102"/><rect fill="#FEFECE" height="10" style="stroke: #A80036; stroke-width: 1.5;" width="15" x="34" y="107"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="32" y="109"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="32" y="113"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="8" x="21" y="134.9951">a</text><!--entity b--><rect fill="#FEFECE" filter="url(#f1pwmp0cnf3wk1)" height="46.2969" style="stroke: #A80036; stroke-width: 1.5;" width="49" x="89.5" y="102"/><rect fill="#FEFECE" height="10" style="stroke: #A80036; stroke-width: 1.5;" width="15" x="118.5" y="107"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="116.5" y="109"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="116.5" y="113"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="9" x="104.5" y="134.9951">b</text><!--link a to b--><path d="M54.28,125 C64.21,125 74.15,125 84.08,125 " fill="none" id="a-b" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="89.27,125,80.27,121,84.27,125,80.27,129,89.27,125" style="stroke: #A80036; stroke-width: 1.0;"/><!--link A.2 to A.3--><!--link A.2 to A.5--><!--link A.5 to A.6--></g></svg></figure>
+<p>Some <code>planuml</code> bullshittery</p>
+<figure><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="211px" preserveAspectRatio="none" style="width:552px;height:211px;" version="1.1" viewBox="0 0 552 211" width="552px" zoomAndPan="magnify"><defs/><g><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="31" x2="31" y1="34.2969" y2="170.8281"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="246" x2="246" y1="34.2969" y2="170.8281"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="478" x2="478" y1="34.2969" y2="170.8281"/><rect fill="#FEFECE" height="30.2969" style="stroke: #A80036; stroke-width: 1.5;" width="46" x="8" y="3"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="32" x="15" y="22.9951">Alice</text><rect fill="#FEFECE" height="30.2969" style="stroke: #A80036; stroke-width: 1.5;" width="46" x="8" y="169.8281"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="32" x="15" y="189.8232">Alice</text><rect fill="#FEFECE" height="30.2969" style="stroke: #A80036; stroke-width: 1.5;" width="42" x="225" y="3"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="28" x="232" y="22.9951">Bob</text><rect fill="#FEFECE" height="30.2969" style="stroke: #A80036; stroke-width: 1.5;" width="42" x="225" y="169.8281"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="28" x="232" y="189.8232">Bob</text><rect fill="#FEFECE" height="30.2969" style="stroke: #A80036; stroke-width: 1.5;" width="126" x="415" y="3"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="112" x="422" y="22.9951">RequestHandler</text><rect fill="#FEFECE" height="30.2969" style="stroke: #A80036; stroke-width: 1.5;" width="126" x="415" y="169.8281"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="112" x="422" y="189.8232">RequestHandler</text><polygon fill="#A80036" points="234,61.4297,244,65.4297,234,69.4297,238,65.4297" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="31" x2="240" y1="65.4297" y2="65.4297"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="149" x="38" y="60.3638">Authentication Request</text><polygon fill="#A80036" points="466,90.5625,476,94.5625,466,98.5625,470,94.5625" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="246" x2="472" y1="94.5625" y2="94.5625"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="208" x="253" y="89.4966">validated Authenticated Request</text><polygon fill="#A80036" points="257,119.6953,247,123.6953,257,127.6953,253,123.6953" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="251" x2="477" y1="123.6953" y2="123.6953"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="188" x="263" y="118.6294">Authenticated Response (OK)</text><polygon fill="#A80036" points="42,148.8281,32,152.8281,42,156.8281,38,152.8281" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="36" x2="245" y1="152.8281" y2="152.8281"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="191" x="48" y="147.7622">Authentication Response (OK)</text></g></svg></figure>
+<p>Some kotlin example code</p>
+<pre><code class="language-kotlin">@Test
+internal fun so65364554() {
+    val testScheduler = TestScheduler()
+    Observable.fromCallable {
+        Response&lt;String&gt;(false)
+    }.call(
+            ioScheduler = testScheduler,
+            timerScheduler = testScheduler,
+            maxRetryCount = 5,
+            retryIntervalInSec = 1
+    ) {
+        false
+    }
+    println(&quot;call&quot;)
+}
+</code></pre>
+<h1><a class="header" href="#chapter-1-1" id="chapter-1-1">Chapter 1</a></h1>
+<p>&lt;&lt;some_text&gt;&gt;</p>
+<figure><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="281px" preserveAspectRatio="none" style="width:588px;height:281px;" version="1.1" viewBox="0 0 588 281" width="588px" zoomAndPan="magnify"><defs><filter height="300%" id="f1pwmp0cnf3wk1" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--cluster A--><rect fill="#FFFFFF" filter="url(#f1pwmp0cnf3wk1)" height="246" style="stroke: #000000; stroke-width: 1.5;" width="419" x="158" y="24"/><rect fill="#FFFFFF" height="10" style="stroke: #000000; stroke-width: 1.5;" width="15" x="557" y="29"/><rect fill="#FFFFFF" height="2" style="stroke: #000000; stroke-width: 1.5;" width="4" x="555" y="31"/><rect fill="#FFFFFF" height="2" style="stroke: #000000; stroke-width: 1.5;" width="4" x="555" y="35"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="11" x="362" y="49.9951">A</text><!--cluster A.44--><rect fill="#FFFFFF" filter="url(#f1pwmp0cnf3wk1)" height="97" style="stroke: #000000; stroke-width: 1.5;" width="104" x="449" y="67"/><rect fill="#FFFFFF" height="10" style="stroke: #000000; stroke-width: 1.5;" width="15" x="533" y="72"/><rect fill="#FFFFFF" height="2" style="stroke: #000000; stroke-width: 1.5;" width="4" x="531" y="74"/><rect fill="#FFFFFF" height="2" style="stroke: #000000; stroke-width: 1.5;" width="4" x="531" y="78"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="36" x="483" y="92.9951">A.44</text><!--entity A.2--><rect fill="#FEFECE" filter="url(#f1pwmp0cnf3wk1)" height="46.2969" style="stroke: #A80036; stroke-width: 1.5;" width="62" x="271" y="102"/><rect fill="#FEFECE" height="10" style="stroke: #A80036; stroke-width: 1.5;" width="15" x="313" y="107"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="311" y="109"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="311" y="113"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="22" x="286" y="134.9951">A.2</text><!--entity A.3--><rect fill="#FEFECE" filter="url(#f1pwmp0cnf3wk1)" height="46.2969" style="stroke: #A80036; stroke-width: 1.5;" width="62" x="368" y="102"/><rect fill="#FEFECE" height="10" style="stroke: #A80036; stroke-width: 1.5;" width="15" x="410" y="107"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="408" y="109"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="408" y="113"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="22" x="383" y="134.9951">A.3</text><!--entity A.5--><rect fill="#FEFECE" filter="url(#f1pwmp0cnf3wk1)" height="46.2969" style="stroke: #A80036; stroke-width: 1.5;" width="62" x="271" y="208"/><rect fill="#FEFECE" height="10" style="stroke: #A80036; stroke-width: 1.5;" width="15" x="313" y="213"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="311" y="215"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="311" y="219"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="22" x="286" y="240.9951">A.5</text><!--entity A.6--><rect fill="#FEFECE" filter="url(#f1pwmp0cnf3wk1)" height="30" style="stroke: #A80036; stroke-width: 1.5;" width="40" x="368" y="216"/><rect fill="#FEFECE" height="10" style="stroke: #A80036; stroke-width: 1.5;" width="15" x="388" y="221"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="386" y="223"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="386" y="227"/><!--entity A.1--><rect fill="#FFFFFF" filter="url(#f1pwmp0cnf3wk1)" height="46.2969" style="stroke: #A80036; stroke-width: 1.5;" width="62" x="174" y="102"/><rect fill="#FFFFFF" height="10" style="stroke: #A80036; stroke-width: 1.5;" width="15" x="216" y="107"/><rect fill="#FFFFFF" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="214" y="109"/><rect fill="#FFFFFF" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="214" y="113"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="22" x="189" y="134.9951">A.1</text><!--entity A4.1--><rect fill="#FEFECE" filter="url(#f1pwmp0cnf3wk1)" height="46.2969" style="stroke: #A80036; stroke-width: 1.5;" width="71" x="465.5" y="102"/><rect fill="#FEFECE" height="10" style="stroke: #A80036; stroke-width: 1.5;" width="15" x="516.5" y="107"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="514.5" y="109"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="514.5" y="113"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="31" x="480.5" y="134.9951">A4.1</text><!--entity a--><rect fill="#FEFECE" filter="url(#f1pwmp0cnf3wk1)" height="46.2969" style="stroke: #A80036; stroke-width: 1.5;" width="48" x="6" y="102"/><rect fill="#FEFECE" height="10" style="stroke: #A80036; stroke-width: 1.5;" width="15" x="34" y="107"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="32" y="109"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="32" y="113"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="8" x="21" y="134.9951">a</text><!--entity b--><rect fill="#FEFECE" filter="url(#f1pwmp0cnf3wk1)" height="46.2969" style="stroke: #A80036; stroke-width: 1.5;" width="49" x="89.5" y="102"/><rect fill="#FEFECE" height="10" style="stroke: #A80036; stroke-width: 1.5;" width="15" x="118.5" y="107"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="116.5" y="109"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="116.5" y="113"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="9" x="104.5" y="134.9951">b</text><!--link a to b--><path d="M54.28,125 C64.21,125 74.15,125 84.08,125 " fill="none" id="a-b" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="89.27,125,80.27,121,84.27,125,80.27,129,89.27,125" style="stroke: #A80036; stroke-width: 1.0;"/><!--link A.2 to A.3--><!--link A.2 to A.5--><!--link A.5 to A.6--></g></svg></figure>
+<p>Some <code>planuml</code> bullshittery</p>
+<figure><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="211px" preserveAspectRatio="none" style="width:552px;height:211px;" version="1.1" viewBox="0 0 552 211" width="552px" zoomAndPan="magnify"><defs/><g><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="31" x2="31" y1="34.2969" y2="170.8281"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="246" x2="246" y1="34.2969" y2="170.8281"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 5.0,5.0;" x1="478" x2="478" y1="34.2969" y2="170.8281"/><rect fill="#FEFECE" height="30.2969" style="stroke: #A80036; stroke-width: 1.5;" width="46" x="8" y="3"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="32" x="15" y="22.9951">Alice</text><rect fill="#FEFECE" height="30.2969" style="stroke: #A80036; stroke-width: 1.5;" width="46" x="8" y="169.8281"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="32" x="15" y="189.8232">Alice</text><rect fill="#FEFECE" height="30.2969" style="stroke: #A80036; stroke-width: 1.5;" width="42" x="225" y="3"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="28" x="232" y="22.9951">Bob</text><rect fill="#FEFECE" height="30.2969" style="stroke: #A80036; stroke-width: 1.5;" width="42" x="225" y="169.8281"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="28" x="232" y="189.8232">Bob</text><rect fill="#FEFECE" height="30.2969" style="stroke: #A80036; stroke-width: 1.5;" width="126" x="415" y="3"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="112" x="422" y="22.9951">RequestHandler</text><rect fill="#FEFECE" height="30.2969" style="stroke: #A80036; stroke-width: 1.5;" width="126" x="415" y="169.8281"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="112" x="422" y="189.8232">RequestHandler</text><polygon fill="#A80036" points="234,61.4297,244,65.4297,234,69.4297,238,65.4297" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="31" x2="240" y1="65.4297" y2="65.4297"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="149" x="38" y="60.3638">Authentication Request</text><polygon fill="#A80036" points="466,90.5625,476,94.5625,466,98.5625,470,94.5625" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0;" x1="246" x2="472" y1="94.5625" y2="94.5625"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="208" x="253" y="89.4966">validated Authenticated Request</text><polygon fill="#A80036" points="257,119.6953,247,123.6953,257,127.6953,253,123.6953" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="251" x2="477" y1="123.6953" y2="123.6953"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="188" x="263" y="118.6294">Authenticated Response (OK)</text><polygon fill="#A80036" points="42,148.8281,32,152.8281,42,156.8281,38,152.8281" style="stroke: #A80036; stroke-width: 1.0;"/><line style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 2.0,2.0;" x1="36" x2="245" y1="152.8281" y2="152.8281"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="191" x="48" y="147.7622">Authentication Response (OK)</text></g></svg></figure>
+<p>Some kotlin example code</p>
+<pre><code class="language-kotlin">@Test
+internal fun so65364554() {
+    val testScheduler = TestScheduler()
+    Observable.fromCallable {
+        Response&lt;String&gt;(false)
+    }.call(
+            ioScheduler = testScheduler,
+            timerScheduler = testScheduler,
+            maxRetryCount = 5,
+            retryIntervalInSec = 1
+    ) {
+        false
+    }
+    println(&quot;call&quot;)
+}
+</code></pre>
+<h1><a class="header" href="#011" id="011">0.1.1</a></h1>
+<p>[UPDATE] dep whatever</p>
+<h1><a class="header" href="#010" id="010">0.1.0</a></h1>
+<p>[FEAT] init</p>
+<h1><a class="header" href="#chapter-1-2" id="chapter-1-2">Chapter 1</a></h1>
+<p>&lt;&lt;some_text&gt;&gt;</p>
+<figure><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="281px" preserveAspectRatio="none" style="width:588px;height:281px;" version="1.1" viewBox="0 0 588 281" width="588px" zoomAndPan="magnify"><defs><filter height="300%" id="f1pwmp0cnf3wk1" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--cluster A--><rect fill="#FFFFFF" filter="url(#f1pwmp0cnf3wk1)" height="246" style="stroke: #000000; stroke-width: 1.5;" width="419" x="158" y="24"/><rect fill="#FFFFFF" height="10" style="stroke: #000000; stroke-width: 1.5;" width="15" x="557" y="29"/><rect fill="#FFFFFF" height="2" style="stroke: #000000; stroke-width: 1.5;" width="4" x="555" y="31"/><rect fill="#FFFFFF" height="2" style="stroke: #000000; stroke-width: 1.5;" width="4" x="555" y="35"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="11" x="362" y="49.9951">A</text><!--cluster A.44--><rect fill="#FFFFFF" filter="url(#f1pwmp0cnf3wk1)" height="97" style="stroke: #000000; stroke-width: 1.5;" width="104" x="449" y="67"/><rect fill="#FFFFFF" height="10" style="stroke: #000000; stroke-width: 1.5;" width="15" x="533" y="72"/><rect fill="#FFFFFF" height="2" style="stroke: #000000; stroke-width: 1.5;" width="4" x="531" y="74"/><rect fill="#FFFFFF" height="2" style="stroke: #000000; stroke-width: 1.5;" width="4" x="531" y="78"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="36" x="483" y="92.9951">A.44</text><!--entity A.2--><rect fill="#FEFECE" filter="url(#f1pwmp0cnf3wk1)" height="46.2969" style="stroke: #A80036; stroke-width: 1.5;" width="62" x="271" y="102"/><rect fill="#FEFECE" height="10" style="stroke: #A80036; stroke-width: 1.5;" width="15" x="313" y="107"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="311" y="109"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="311" y="113"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="22" x="286" y="134.9951">A.2</text><!--entity A.3--><rect fill="#FEFECE" filter="url(#f1pwmp0cnf3wk1)" height="46.2969" style="stroke: #A80036; stroke-width: 1.5;" width="62" x="368" y="102"/><rect fill="#FEFECE" height="10" style="stroke: #A80036; stroke-width: 1.5;" width="15" x="410" y="107"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="408" y="109"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="408" y="113"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="22" x="383" y="134.9951">A.3</text><!--entity A.5--><rect fill="#FEFECE" filter="url(#f1pwmp0cnf3wk1)" height="46.2969" style="stroke: #A80036; stroke-width: 1.5;" width="62" x="271" y="208"/><rect fill="#FEFECE" height="10" style="stroke: #A80036; stroke-width: 1.5;" width="15" x="313" y="213"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="311" y="215"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="311" y="219"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="22" x="286" y="240.9951">A.5</text><!--entity A.6--><rect fill="#FEFECE" filter="url(#f1pwmp0cnf3wk1)" height="30" style="stroke: #A80036; stroke-width: 1.5;" width="40" x="368" y="216"/><rect fill="#FEFECE" height="10" style="stroke: #A80036; stroke-width: 1.5;" width="15" x="388" y="221"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="386" y="223"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="386" y="227"/><!--entity A.1--><rect fill="#FFFFFF" filter="url(#f1pwmp0cnf3wk1)" height="46.2969" style="stroke: #A80036; stroke-width: 1.5;" width="62" x="174" y="102"/><rect fill="#FFFFFF" height="10" style="stroke: #A80036; stroke-width: 1.5;" width="15" x="216" y="107"/><rect fill="#FFFFFF" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="214" y="109"/><rect fill="#FFFFFF" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="214" y="113"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="22" x="189" y="134.9951">A.1</text><!--entity A4.1--><rect fill="#FEFECE" filter="url(#f1pwmp0cnf3wk1)" height="46.2969" style="stroke: #A80036; stroke-width: 1.5;" width="71" x="465.5" y="102"/><rect fill="#FEFECE" height="10" style="stroke: #A80036; stroke-width: 1.5;" width="15" x="516.5" y="107"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="514.5" y="109"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="514.5" y="113"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="31" x="480.5" y="134.9951">A4.1</text><!--entity a--><rect fill="#FEFECE" filter="url(#f1pwmp0cnf3wk1)" height="46.2969" style="stroke: #A80036; stroke-width: 1.5;" width="48" x="6" y="102"/><rect fill="#FEFECE" height="10" style="stroke: #A80036; stroke-width: 1.5;" width="15" x="34" y="107"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="32" y="109"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="32" y="113"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="8" x="21" y="134.9951">a</text><!--entity b--><rect fill="#FEFECE" filter="url(#f1pwmp0cnf3wk1)" height="46.2969" style="stroke: #A80036; stroke-width: 1.5;" width="49" x="89.5" y="102"/><rect fill="#FEFECE" height="10" style="stroke: #A80036; stroke-width: 1.5;" width="15" x="118.5" y="107"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="116.5" y="109"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="116.5" y="113"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="9" x="104.5" y="134.9951">b</text><!--link a to b--><path d="M54.28,125 C64.21,125 74.15,125 84.08,125 " fill="none" id="a-b" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="89.27,125,80.27,121,84.27,125,80.27,129,89.27,125" style="stroke: #A80036; stroke-width: 1.0;"/><!--link A.2 to A.3--><!--link A.2 to A.5--><!--link A.5 to A.6--></g></svg></figure>
+<h1><a class="header" href="#chapter-1-3" id="chapter-1-3">Chapter 1</a></h1>
+<p>&lt;&lt;some_text&gt;&gt;</p>
+<figure><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="281px" preserveAspectRatio="none" style="width:588px;height:281px;" version="1.1" viewBox="0 0 588 281" width="588px" zoomAndPan="magnify"><defs><filter height="300%" id="f1pwmp0cnf3wk1" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--cluster A--><rect fill="#FFFFFF" filter="url(#f1pwmp0cnf3wk1)" height="246" style="stroke: #000000; stroke-width: 1.5;" width="419" x="158" y="24"/><rect fill="#FFFFFF" height="10" style="stroke: #000000; stroke-width: 1.5;" width="15" x="557" y="29"/><rect fill="#FFFFFF" height="2" style="stroke: #000000; stroke-width: 1.5;" width="4" x="555" y="31"/><rect fill="#FFFFFF" height="2" style="stroke: #000000; stroke-width: 1.5;" width="4" x="555" y="35"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="11" x="362" y="49.9951">A</text><!--cluster A.44--><rect fill="#FFFFFF" filter="url(#f1pwmp0cnf3wk1)" height="97" style="stroke: #000000; stroke-width: 1.5;" width="104" x="449" y="67"/><rect fill="#FFFFFF" height="10" style="stroke: #000000; stroke-width: 1.5;" width="15" x="533" y="72"/><rect fill="#FFFFFF" height="2" style="stroke: #000000; stroke-width: 1.5;" width="4" x="531" y="74"/><rect fill="#FFFFFF" height="2" style="stroke: #000000; stroke-width: 1.5;" width="4" x="531" y="78"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="36" x="483" y="92.9951">A.44</text><!--entity A.2--><rect fill="#FEFECE" filter="url(#f1pwmp0cnf3wk1)" height="46.2969" style="stroke: #A80036; stroke-width: 1.5;" width="62" x="271" y="102"/><rect fill="#FEFECE" height="10" style="stroke: #A80036; stroke-width: 1.5;" width="15" x="313" y="107"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="311" y="109"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="311" y="113"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="22" x="286" y="134.9951">A.2</text><!--entity A.3--><rect fill="#FEFECE" filter="url(#f1pwmp0cnf3wk1)" height="46.2969" style="stroke: #A80036; stroke-width: 1.5;" width="62" x="368" y="102"/><rect fill="#FEFECE" height="10" style="stroke: #A80036; stroke-width: 1.5;" width="15" x="410" y="107"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="408" y="109"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="408" y="113"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="22" x="383" y="134.9951">A.3</text><!--entity A.5--><rect fill="#FEFECE" filter="url(#f1pwmp0cnf3wk1)" height="46.2969" style="stroke: #A80036; stroke-width: 1.5;" width="62" x="271" y="208"/><rect fill="#FEFECE" height="10" style="stroke: #A80036; stroke-width: 1.5;" width="15" x="313" y="213"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="311" y="215"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="311" y="219"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="22" x="286" y="240.9951">A.5</text><!--entity A.6--><rect fill="#FEFECE" filter="url(#f1pwmp0cnf3wk1)" height="30" style="stroke: #A80036; stroke-width: 1.5;" width="40" x="368" y="216"/><rect fill="#FEFECE" height="10" style="stroke: #A80036; stroke-width: 1.5;" width="15" x="388" y="221"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="386" y="223"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="386" y="227"/><!--entity A.1--><rect fill="#FFFFFF" filter="url(#f1pwmp0cnf3wk1)" height="46.2969" style="stroke: #A80036; stroke-width: 1.5;" width="62" x="174" y="102"/><rect fill="#FFFFFF" height="10" style="stroke: #A80036; stroke-width: 1.5;" width="15" x="216" y="107"/><rect fill="#FFFFFF" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="214" y="109"/><rect fill="#FFFFFF" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="214" y="113"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="22" x="189" y="134.9951">A.1</text><!--entity A4.1--><rect fill="#FEFECE" filter="url(#f1pwmp0cnf3wk1)" height="46.2969" style="stroke: #A80036; stroke-width: 1.5;" width="71" x="465.5" y="102"/><rect fill="#FEFECE" height="10" style="stroke: #A80036; stroke-width: 1.5;" width="15" x="516.5" y="107"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="514.5" y="109"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="514.5" y="113"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="31" x="480.5" y="134.9951">A4.1</text><!--entity a--><rect fill="#FEFECE" filter="url(#f1pwmp0cnf3wk1)" height="46.2969" style="stroke: #A80036; stroke-width: 1.5;" width="48" x="6" y="102"/><rect fill="#FEFECE" height="10" style="stroke: #A80036; stroke-width: 1.5;" width="15" x="34" y="107"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="32" y="109"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="32" y="113"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="8" x="21" y="134.9951">a</text><!--entity b--><rect fill="#FEFECE" filter="url(#f1pwmp0cnf3wk1)" height="46.2969" style="stroke: #A80036; stroke-width: 1.5;" width="49" x="89.5" y="102"/><rect fill="#FEFECE" height="10" style="stroke: #A80036; stroke-width: 1.5;" width="15" x="118.5" y="107"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="116.5" y="109"/><rect fill="#FEFECE" height="2" style="stroke: #A80036; stroke-width: 1.5;" width="4" x="116.5" y="113"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="9" x="104.5" y="134.9951">b</text><!--link a to b--><path d="M54.28,125 C64.21,125 74.15,125 84.08,125 " fill="none" id="a-b" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="89.27,125,80.27,121,84.27,125,80.27,129,89.27,125" style="stroke: #A80036; stroke-width: 1.0;"/><!--link A.2 to A.3--><!--link A.2 to A.5--><!--link A.5 to A.6--></g></svg></figure>
+<h1><a class="header" href="#011-1" id="011-1">0.1.1</a></h1>
+<p>[UPDATE] dep whatever</p>
+<h1><a class="header" href="#010-1" id="010-1">0.1.0</a></h1>
+<p>[FEAT] init</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
+        
+
+    </body>
+</html>
